@@ -8,6 +8,7 @@ const Clicker = () => {
         <div>
             <h1> Clicker Game </h1>
             <p> </p>
+            <button onClick={}></button>
         </div>
     )
 }
