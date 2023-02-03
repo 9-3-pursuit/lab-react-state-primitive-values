@@ -48,7 +48,7 @@ function App() {
       <button onClick={increaseAmt}>+{added}</button>
       <button onClick={pointsPaid}>Pay 10 points to change from +{added} to +{added + 1}</button>
       {/* <h3 style={font ? { color: "black" } : { color: "purple" }}> */}
-      <button style={count ? {display:'none'} : {display:'block'}}></button>
+      {/* <button style={count ? {display:'none'} : {display:'block'}}></button> */}
       <h2>You Win!</h2>
       <button onClick={restartGame}>Play again?</button>
     </main>
