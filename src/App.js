@@ -9,7 +9,7 @@ const App = () => {
   const [point, setPoint] = useState(1);
 
   const updateScore = () => {
-    setScore((score) => score + 1);
+    setScore((score) => score + point);
   };
 
   const updatePoints = () => {
