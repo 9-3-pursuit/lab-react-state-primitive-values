@@ -2,4 +2,21 @@
 main {
   margin: 25px auto;
   width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  display: block;
+  margin: 10px;
+  color:  #386aa6;
+  background-color:  #79CBCA;
+}
+
+body{
+  background: #77a1d3;
+  background: radial-gradient(circle, #79CBCA 0%, #E684AE 100%);
+}
+
+h1, h2{
+  color:rgb(201, 101, 201);
 }
