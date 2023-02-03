@@ -4,16 +4,10 @@ import { useState } from "react";
 
 function App () {
   let [sum, setSum] = useState(0);
-  let [x, setX] = useState(1)
-  let [none, setDisplayNone] = useState("none")
-  let [block, setBlock] = useState("block")
+  let [x, setX] = useState(1);
 
   function addX () {
     setSum(sum+x);
-    if(sum >= 100) {
-      setDisplayNone(none = "block" );
-      setBlock(block = "none" )
-    }
   }
 
   function payment () {
@@ -28,19 +22,23 @@ function App () {
   function reach100 () {
     setSum(sum=0);
     setX(x=1)
-    setDisplayNone(none = "none" );
-    setBlock(block = "block" )
   }
 
-    return (
-      <main>
-        <h1>Current Score: {sum}</h1>
-        <h2 className={none}>You Win!</h2>
-        <button className={none} onClick={reach100}>Play again?</button>
-        <button className={block} onClick={addX}>+{x}</button>
-        <button className={block} onClick={payment}>Pay 10 points to change from +{x} to +{x+1}</button>
-      </main>
-    );
+if(sum >= 100) {
+  return (
+    <main>
+      <h2>You Win!</h2>
+      <button onClick={reach100}>Play again?</button>
+    </main>
+  );
+} else {
+  return (
+    <main>
+      <h1>Current Score: {sum}</h1>
+      <button onClick={addX}>+{x}</button>
+      <button onClick={payment}>Pay 10 points to change from +{x} to +{x+1}</button>
+    </main>
+  );
 }
-
+}
 export default App;
