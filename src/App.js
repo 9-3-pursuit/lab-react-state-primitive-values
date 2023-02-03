@@ -28,20 +28,24 @@ const App = () => {
 
   return (
     <main>
-      <div className="main-game-container">
-        <h1>Current Score: {score}</h1>
-        <button onClick={updateScore}>+{point}</button>
-        <button onClick={updatePoints}>
-          Pay 10 points to change from +{point} to +{point + 1}
-        </button>
-      </div>
+      {score < 100 ? (
+        <div className="main-game-container">
+          <h1>Current Score: {score}</h1>
+          <button onClick={updateScore}>+{point}</button>
+          <button onClick={updatePoints}>
+            Pay 10 points to change from +{point} to +{point + 1}
+          </button>
+        </div>
+      ) : null}
 
-      <div className="game-won-container">
-        <h2>You Win!</h2>
-        <button type="submit" onClick={reset}>
-          Play again?
-        </button>
-      </div>
+      {score >= 100 ? (
+        <div className="game-won-container">
+          <h2>You Win!</h2>
+          <button type="submit" onClick={reset}>
+            Play again?
+          </button>
+        </div>
+      ) : null}
     </main>
   );
 };
