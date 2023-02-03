@@ -3,13 +3,45 @@ import "./App.css";
 import { useState } from "react"
 
 function App() {
-  const [count, setCount] = useState(0)
- 
+  // let newScore = 0
+  const [count, setCount] = useState(0) // score button info
+  const [added, setAdded] = useState(1) //increment button info
+  function increaseAmt() {
+    setCount(count + added)
+
+  }
+
+  function pointsPaid() {
+    if (count < 10) {
+      alert("You can't afford that!") //alert msg condition
+    } else {
+      if (count >= 10) { //increment of & decrement of 
+        setCount(count - 10)
+        setAdded(added + 1)
+      }
+    }
+  }
+
+  function winPage(count) {
+
+    if (count >= 100) {
+      setCount(count + added)
+
+
+    }
+  }
+
+  function restartGame() {
+    setCount(0)
+    setAdded(1)
+  }
   return (
     <main>
-      <h2>Current Score</h2>
-      <button>+1</button>
-      <button>Pay 10 points to change from +1 to +2</button>
+      <h2>Current Score: {count}</h2>
+      <button onClick={increaseAmt}>+{added}</button>
+      <button onClick={pointsPaid}>Pay 10 points to change from +{added} to +{added + 1}</button>
+      <h2>You Win!</h2>
+      <button onClick={restartGame}>Play again?</button>
     </main>
   );
 }
