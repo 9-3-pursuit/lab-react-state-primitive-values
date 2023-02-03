@@ -7,9 +7,22 @@ import { useState } from "react";
 const [score, setScore] = useState(0);
 const [point, setPoint] = useState(1);
 
-const updateScore = () => {};
-const updatePoints = () => {};
-const reset = () => {};
+const updateScore = () => {
+  setScore((score) => score + 1);
+};
+
+const updatePoints = () => {
+  if (score >= 10) {
+    setPoint((point) => point + 1);
+    setScore((score) => score - 10);
+  } else {
+    window.alert("You can't afford that!");
+  }
+};
+const reset = () => {
+  setScore(0);
+  setPoint(1);
+};
 
 const App = () => {
   return (
