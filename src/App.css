@@ -1,4 +1,13 @@
-/* Your code here! */
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+
 main {
   margin: 25px auto;
   width: 50%;
