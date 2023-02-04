@@ -3,18 +3,19 @@ import "./App.css";
 import { useState } from "react";
 
 function App () {
-  const [count, setCount] = useState(0)
-  console.log(setCount, count)
+  const [score, setScore] = useState(0)
+  console.log(setScore, score)
 
   const handleClick = () => {
-    setCount(count + 1)
-    console.log(setCount, count)
+    setScore(score + 1)
+    console.log(setScore, score)
   }
     return (
       <main>
         <p>React State Lab</p>
-        <h1> Current Score: {count}</h1>
+        <h1> Current Score: {score}</h1>
         <button onClick={() => handleClick()}> +1 </button>
+        <button onClick={() => handleClick()}> Pay 10 points to change from +{score} to +{score + 1} </button>
       </main>
     );
 }
