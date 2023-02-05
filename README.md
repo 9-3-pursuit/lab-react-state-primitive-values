@@ -42,7 +42,7 @@ Keep the following in mind for this lab as you run the tests.
 
 1. While the `cypress-watch-and-reload` package has been installed in this project, sometimes the React application will take longer to reload than the tests. If you feel as though a test should be passing that isn't, try pressing the re-run button in the Cypress tests before asking for help.
 
-## Instructions
+## Instructions 
 
 You will be building an application that is similar to popular "clicker" games. The game has the following rules:
 
