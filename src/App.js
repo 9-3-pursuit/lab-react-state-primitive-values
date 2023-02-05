@@ -8,8 +8,6 @@ function App () {
   
   const handleClick = () => {
     setScore(score + game)
-    if ((score + game) >= 100){
-    }
   }  
   
   const upgradeScore = () => {
