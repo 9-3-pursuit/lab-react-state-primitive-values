@@ -11,9 +11,6 @@ function App() {
 
   function addToScore(counter) {
     setCounter(counter + points)
-    if (counter >= 100) {
-
-    }
   }
 
   function payPoints(counter) {
@@ -29,7 +26,7 @@ function App() {
     setCounter(0)
     setPoints(1)
   }
-
+  
   return (
     <main>
       {counter < 100 ? (
@@ -49,4 +46,3 @@ function App() {
 }
 
 export default App;
-
