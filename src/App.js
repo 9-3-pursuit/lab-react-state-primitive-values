@@ -4,24 +4,37 @@ import { useState } from "react";
 
 function App () {
   const [score, setScore] = useState(0)
-  console.log(setScore, score)
-
+  const [game, setGame] = useState(1)
+  const [show, setShow] = useState(true)
+  
   const handleClick = () => {
-    setScore(score + 1)
-    console.log(setScore, score)
+    setScore(score + game)
+    if (score >= 100){
+      setShow(false)
+    }
   }
 
+  const upgradeScore = () => {
+    if (score >= 10){
+      setScore(score - 10)
+      setGame(game + 1)
+    } else {
+      alert("You can't afford that!")
+    }
+  }
 
   const resetScore = () => {
     setScore(0)
-    
+    setGame(0)
+    setShow(true)
   }
     return (
       <main>
-        <p>React State Lab</p>
+        <h1>React State Lab</h1>
         <h1> Current Score: {score}</h1>
-        <button onClick={() => handleClick()}> +1 </button>
-        <button onClick={() => handleClick()}> Pay 10 points to change from +{score} to +{score + 1} </button>
+        <button onClick={() => handleClick()}> +{game} </button> <br></br>
+        <button onClick={() => upgradeScore()}> Pay 10 points to change from +{game} to +{game + 1} </button>
+        <h1> {show} </h1>
         <button onClick={() => resetScore()}> Play again </button>
       </main>
     );
