@@ -12,7 +12,7 @@ function App() {
 
   function pointsPaid() {
     if (count < 10) {
-      alert("You can't afford that!") //alert msg condition
+      alert("You can't afford that!") // ! alert msg condition
     } else {
       if (count >= 10) { //increment of & decrement of 
         setCount(count - 10)
@@ -26,14 +26,14 @@ function App() {
     }
   }
 
-  // function winPage(count) { 
+  // !   function winPage(count) { 
 
-  //   if (count >= 100) { //increment of 100 or more & you win
-  //     setCount(count + added)
+  //  ! if (count >= 100) { //increment of 100 or more & you win
+  //   !  setCount(count + added)
 
 
-  //   }
-  // }
+  // !  }
+  //! ^--- code is another option for the >= 100 count but unsure of what way to insert it in the main}
 
   function restartGame() {
     setCount(0)
