@@ -14,7 +14,7 @@ class App extends React.Component {
 
       <main>
         <p>React State Lab</p>
-        <p></p>
+   
       </main>
     );
     
@@ -55,7 +55,8 @@ return this.state.score < 100 ? (
     <h1> Current Score: {this.state.score}</h1>
     <button onClick={() => this.increment()}>+{this.state.addButton}</button>
     <button onClick={() => this.upgrade()}>
-      Pay 10 points to change from + {this.state.addButton} to + {this.state.addButton + 1}
+      Pay 10 points to change from + {this.state.addButton} to + 
+{this.state.addButton + 1}
     </button>
   </main>
   ):(
@@ -64,6 +65,7 @@ return this.state.score < 100 ? (
       <h1>{this.state.score}</h1>
       <h2>You Win!</h2>
       <button onClick={() => this.restart()}>Play again?</button>
+
 
      </main>
   );
