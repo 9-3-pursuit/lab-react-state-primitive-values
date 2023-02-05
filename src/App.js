@@ -11,6 +11,7 @@ function App () {
     setScore(score + game)
     if ((score + game) >= 100){
       setShow(true)
+      console.log(show)
     }
   }
 
@@ -27,6 +28,7 @@ function App () {
     setScore(0)
     setGame(1)
     setShow(false)
+    console.log(show)
   }
 
     return (
@@ -36,7 +38,6 @@ function App () {
         <button className={show ? "hidden" : ""} onClick={() => handleClick()}> +{game} </button> <br></br>
         <button className={show ? "hidden" : ""} onClick={() => upgradeScore()}> Pay 10 points to change from +{game} to +{game + 1} </button>
         </div>
-        
         <div>
         <h1 className={show ? "" : "hidden"}> You Win! </h1>
         <button className={show ? "" : "hidden"} onClick={() => resetScore()}> Play again? </button>
