@@ -25,6 +25,8 @@ function App () {
   }
   
   return (
+    <header>
+    <h1> Clicker Game </h1>
     <main>
       {score < 100 ? (
         <div>
@@ -39,6 +41,7 @@ function App () {
         </div>
       )}
     </main>
+    </header>
   );
 }
 export default App;
