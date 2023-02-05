@@ -32,10 +32,15 @@ function App () {
     return (
       <main>
         <h1 className={show ? "hidden" : ""}> Current Score: {score}</h1>
+        <div>
         <button className={show ? "hidden" : ""} onClick={() => handleClick()}> +{game} </button> <br></br>
         <button className={show ? "hidden" : ""} onClick={() => upgradeScore()}> Pay 10 points to change from +{game} to +{game + 1} </button>
+        </div>
+        
+        <div>
         <h1 className={show ? "" : "hidden"}> You Win! </h1>
         <button className={show ? "" : "hidden"} onClick={() => resetScore()}> Play again? </button>
+        </div>
       </main>
     );
 }
