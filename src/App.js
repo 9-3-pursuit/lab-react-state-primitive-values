@@ -1,12 +1,20 @@
 import React from "react";
 import "./App.css";
+import Clicker from './Components/Clicker'
+
+
 
 function App () {
     return (
-      <main>
-        <p>React State Lab</p>
-      </main>
+      <div>
+        <Clicker />
+      </div>
     );
 }
 
-export default App;
+export default App
+
+
+
+
+
