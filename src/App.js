@@ -23,32 +23,26 @@ function App () {
     }
   }
 
-  
-
-  function resetGame() {
+   function resetGame() {
     setScore(0)
     setCounter(1)
    }
    
-   
-    return (
-      <main>
-        
-        {score < 100 ? (
-        <div>
-          <h1>Current Score: {score} </h1>
-          <button onClick={changeScore}>+{counter}</button>
-          <button onClick={payTen}>Pay 10 points to change from +{counter} to +{counter + 1}</button>
-        </div>
-    ) : (
-        <div>
-          {/* <h1>Current Score: {score} </h1> */}
-          <h2>You Win! </h2>
-          <button onClick={(resetGame)}>Play again?</button>
-        </div>
-    )}
-      </main>
-    );
-}
+  let gameInPlay = (
+    <div>
+      <h1>Current Score: {score} </h1>
+      <button onClick={changeScore}>+{counter}</button>
+      <button onClick={payTen}>Pay 10 points to change from +{counter} to +{counter + 1}</button>
+    </div>
+  );      
+  
+  let youWin = (
+    <div>  
+      <h2>You Win! </h2>
+      <button onClick={(resetGame)}>Play again?</button>
+    </div>
+  )
+    return <main> {score < 100 ? gameInPlay : youWin}</main>
+  }
 
 export default App;
