@@ -1,5 +1,26 @@
 /* Your code here! */
 main {
-  margin: 25px auto;
+  margin: 10% auto;
   width: 50%;
+  border:2px solid black;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top:2%;
+  background-image: linear-gradient(to top, #fff1eb 0%, peachpuff 100%);
+}
+
+div button{
+  margin-bottom: 8%;
+  margin-top: 2%;
+  width:55%;
+  padding:10px;
+  font-size: larger;
+  background-color: papayawhip;
+  border-color: black;;
+}
+
+header h1{
+  margin: 5% 38%;
+  font-family:monospace;
 }
