@@ -4,25 +4,19 @@ import { useState } from "react";
 
 function App () {
   const [points, setPoints] = useState(0)
-  const [spend, setSpend] = useState(10)
+  const [increment, setIncrement] = useState(1)
 
   function earnPoints() {
-    setPoints(points + 1)
+    setPoints(points + increment)
   }
 
   function spendPoints() {
-    if (points < spend) {
+    if (points < 10) {
       alert('You can\'t afford that!')
     } else {
       setPoints(points - 10)
+      setIncrement(increment + 1)
     }
-
-    
-
-    // setSpend(spend + 10)
-    // for (let i = 10; i <= spend; i += 10) {
-
-    // }
   }
 
   function playAgain() {
@@ -33,9 +27,9 @@ function App () {
   return (
     <main>
       <h1>Current Score: {points}</h1>
-      <button onClick={earnPoints}>+1</button>
+      <button onClick={earnPoints}>+{increment}</button>
       <br />
-      <button onClick={spendPoints}>Pay 10 points to change from +1 to +2</button>
+      <button onClick={spendPoints}>Pay 10 points to change from +{increment} to +{increment + 1}</button>
     </main>
   );
   } else
