@@ -21,6 +21,7 @@ function App () {
 
   function playAgain() {
     setPoints(0)
+    setIncrement(1)
   }
   
   if (points < 100) {
@@ -35,9 +36,8 @@ function App () {
   } else
   return (
     <main>
-      <h1>Current Score: {points}</h1>
       <h2>You win!</h2>
-      <button onClick={playAgain}>Play Again?</button>
+      <button onClick={playAgain}>Play again?</button>
     </main>
   )
 }
