@@ -3,3 +3,10 @@ main {
   margin: 25px auto;
   width: 50%;
 }
+.button{
+  display:inline-block;
+}
+p{
+  text-align: center;
+  text-emphasis-style: bold;
+}
