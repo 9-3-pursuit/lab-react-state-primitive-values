@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import {render} from "@testing-library/react";
+import {Render} from "@testing-library/react";
 
 
 class App extends React.Component {
 
 
 // function App () {
-  render() {
+  render()  {
     return  (
 
     
@@ -57,7 +57,11 @@ return this.state.score < 100 ? (
     <button onClick={() => this.upgrade()}>
       Pay 10 points to change from + {this.state.addButton} to + 
 {this.state.addButton + 1}
+
+
     </button>
+    
+
   </main>
   ):(
      <main>
