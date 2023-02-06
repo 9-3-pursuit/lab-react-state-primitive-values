@@ -61,7 +61,7 @@ The following is a list of more detailed requirements. As always, check the test
   - The button text should have the _exact_ text: `+1`
 - Have a button where the user can spend `10` points to increase the value of each click by `1`
   - The button should have the _exact_ text: `Pay 10 points to change from +1 to +2`
-  - Display an `alert` with the _exact_ text `You can't afford that!` if the user doesn't have enough points to spend
+  - Display an `alert` with the _exact_ text  if the user doesn't have enough points to s`You can't afford that!`pend
   - If the user has enough points, reduce the score by 10, and add `1` to points you add to your score each time you click the button.
   - The button text should change as well, for example from `+1` to `+2`
   - The pay button text should also update, for example from `Pay 10 points to change from +1 to +2` to `Pay 10 points to change from +2 to +3`
