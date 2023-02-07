@@ -33,7 +33,7 @@ function App () {
     return (
       <>
         <h2>You Win!</h2>
-        <button onClick={resetGame}>Play Again?</button>
+        <button onClick={resetGame}>Play again?</button>
       </>
       
       )
