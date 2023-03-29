@@ -1,32 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { useState } from "react";
 
-function App () {
+function App() {
   const [score, setScore] = useState(0);
   const [x, setX] = useState(1);
   const [win, setWin] = useState(false);
 
-  // + button
-  function upScore () {
+  const handleIncrement = () => {
     setScore(score + x);
     if (score + x >= 100) {
       setWin(true);
     }
-  }
+  };
 
-  // pay 10 points
-  function under10(){
+  const handleIncrementorChange = () => {
     if (score < 10) {
-      alert("You can't afford that!")
+      alert("You can't afford that!");
     } else {
       setX(x + 1);
-      setScore(score - 10)
+      setScore(score - 10);
     }
-  }
+  };
 
-  //play again 
-  function reset() {
+  const handleReset = () => {
     setScore(0);
     setX(1);
     setWin(false);
@@ -34,30 +30,32 @@ function App () {
 
   if (win) {
     return (
-        <div>
-            <main>
-            <h1>You Win!</h1>
-                <button onClick={() => reset()}>Play again?</button>
-            </main>
-        </div>
-    ) 
-}
-
-    return (
-      <main>
       <div>
-        <span>Your final score is {score}</span>
+        <main>
+          <h1>You Win!</h1>
+          <button onClick={handleReset}>Play again?</button>
+        </main>
       </div>
-      <div>
-        <h1>Current Score: {score}</h1>
-        <button 
-        onClick={() => upScore()}>+{x}</button>
-        <br/>
-        <button 
-        onClick={() => under10()}>Pay 10 points to change from +{x} to +{x +1} </button>
-      </div>
-      </main>
     );
-    }
+  }
+
+  return (
+    <div>
+      <main>
+        <div>
+          <span>Your final score is {score}</span>
+        </div>
+        <div>
+          <h1>Current Score: {score}</h1>
+          <button onClick={handleIncrement}>+{x}</button>
+          <br />
+          <button onClick={handleIncrementorChange}>
+            Pay 10 points to change from +{x} to +{x + 1}
+          </button>
+        </div>
+      </main>
+    </div>
+  );
+}
 
 export default App;
