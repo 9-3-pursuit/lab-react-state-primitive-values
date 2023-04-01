@@ -6,7 +6,8 @@ function App () {
   const [num, setNum] = useState(0)
   const [plusOne, setPlusOne] = useState("+1")
   const [payBtn, setPayBtn] = useState("Pay 10 points to change from +1 to +2")
-  const [addBtn, setAddBtn] = useState("block")
+  const [addBtn, setAddBtn] = useState("display: block")
+  const [show, toggleShow] = useState(true)
   
   
   function addOne(){
@@ -23,11 +24,12 @@ function App () {
       setNum(addThree)
     }
     if(num >= 100){
-            const noDisplay = "none"
+            const noDisplay = "display: none"
             setAddBtn(noDisplay)
       const win= (<alert>
             <h2>You Win!</h2>
             <button onClick={() => window.location.reload(false)}>Play Again?</button>
+              
            </alert>)
             setNum(win)
 
